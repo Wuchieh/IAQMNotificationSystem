@@ -1,0 +1,12 @@
+{
+  "lineNotificationLabel":"你所設定的位置 目前空氣品質為",
+  "notFountData": "查無資料",
+  "danger":"危險",
+  "veryBad": "很不好",
+  "bad":"不好",
+  "normal": "普通",
+  "good":"好",
+  "dataError": "資料錯誤 請回報管理員",
+  "dangerAlertLabel": "您所設置的位置",
+  "dangerAlertEnd":"周圍檢測出空氣品質已達危險等級"
+}

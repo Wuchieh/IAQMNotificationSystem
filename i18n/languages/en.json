@@ -1,0 +1,17 @@
+{
+  "lineNotificationLabel":"The air quality at the location you have set is currently",
+  "notFountData": "No information available",
+  "danger":"Dangerous",
+  "veryBad": "Very bad",
+  "bad":"Not good",
+  "normal": "Ordinary",
+  "good":"Good",
+  "dataError": "Please report data errors to the administrator",
+  "dangerAlertLabel": "You are here",
+  "dangerAlertEnd":"the air quality of the surrounding area was detected to be at a dangerous level"
+}
+
+
+
+
+

@@ -1,0 +1,12 @@
+{
+  "serverAddr": "127.0.0.1:8081",
+  "RUN MODE": "Debug",
+
+  "databaseHost": "<databaseHost>",
+  "databaseUser": "<databaseUser>",
+  "databasePassword": "<databasePassword>",
+  "databaseDbname": "<databaseDbname>",
+
+  "lineChannelSecret": "<lineChannelSecret>",
+  "lineChannelAccessToken": "<lineChannelAccessToken>"
+}
