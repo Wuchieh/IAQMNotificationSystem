@@ -31,8 +31,8 @@ func init() {
 }
 
 func Run() {
-	r := gin.Default()
 	setGinMode(s.RUNMODE)
+	r := gin.Default()
 	Router(r)
 
 	log.Println(r.Run(s.ServerAddr))
