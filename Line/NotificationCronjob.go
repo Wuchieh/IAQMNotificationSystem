@@ -13,13 +13,10 @@ var (
 )
 
 func NotificationCronjob() {
-	now := time.Now()
-
 	for {
-		nextHour := now.Truncate(time.Hour).Add(time.Hour)
-		sleepDuration := nextHour.Sub(now)
-		now = time.Now()
-		fmt.Println("剩下", sleepDuration)
+		now := time.Now()
+		sleepDuration := now.Truncate(time.Hour).Add(time.Hour).Add(time.Second).Sub(now)
+		log.Println("剩下", sleepDuration)
 		time.Sleep(sleepDuration)
 
 		notification()
