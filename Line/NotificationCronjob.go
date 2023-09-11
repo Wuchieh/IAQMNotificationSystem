@@ -8,10 +8,6 @@ import (
 	"time"
 )
 
-var (
-	aqis []Database.Aqi
-)
-
 func NotificationCronjob() {
 	for {
 		now := time.Now()
@@ -40,8 +36,6 @@ func sendNotification(limit []int) {
 		return
 	}
 
-	aqis = Database.GetAqis()
-
 	if users, err := Database.GetUsersFromNoticeRange(limit); err != nil {
 		log.Println(err)
 		return
@@ -52,7 +46,7 @@ func sendNotification(limit []int) {
 				if err != nil {
 					log.Println(err)
 				}
-				msg := formatMsg(locations)
+				msg := formatMsg(locations, Database.GetAqis())
 				if len(msg) >= 1 {
 					SendMessage(u.LineId, msg)
 				}
@@ -61,7 +55,7 @@ func sendNotification(limit []int) {
 	}
 }
 
-func formatMsg(locations []Database.Location) string {
+func formatMsg(locations []Database.Location, aqis []Database.Aqi) string {
 	var msgs []string
 	for _, location := range locations {
 		var aqiAqi, count float64
