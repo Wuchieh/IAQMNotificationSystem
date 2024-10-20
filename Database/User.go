@@ -1,6 +1,7 @@
 package Database
 
 import (
+	"database/sql"
 	"fmt"
 	"github.com/google/uuid"
 )
@@ -45,4 +46,20 @@ func GetUsersFromNoticeRange(limit []int) ([]User, error) {
 
 func (u *User) SendNotification() ([]Location, error) {
 	return getLocationsFromUserID(u.Id)
+}
+
+func GetUserByLineID(lineID string) (*User, error) {
+	var user User
+
+	err := Db.QueryRow("SELECT id, \"lineID\", \"noticeRange\" FROM users WHERE \"lineID\" = $1 AND deleteat = false", lineID).
+		Scan(&user.Id, &user.LineId, &user.NoticeRange)
+
+	if err != nil {
+		if err == sql.ErrNoRows {
+			return nil, nil
+		}
+		return nil, err
+	}
+
+	return &user, nil
 }
