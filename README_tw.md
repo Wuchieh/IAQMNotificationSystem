@@ -4,7 +4,7 @@
 
 [English](README.md) | 繁體中文
 
-<a href="https://github.com/wuchieh"><img src="imgs/LogoWhile.png" alt="wuchieh" style="height: 100px;"></a>
+<a href="https://github.com/wuchieh"><img src="https://github.com/wuchieh.png" alt="wuchieh" style="height: 100px;"></a>
 &emsp;
 <a href="https://github.com/MeowXiaoXiang"><img src="https://github.com/MeowXiaoXiang.png" alt="MeowXiaoXiang" style="height: 100px;"></a>
 
